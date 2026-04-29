@@ -72,7 +72,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      # 只在非tag推送时执行自动打tag
+      # Only auto-tag on non-tag pushes
       - name: Get latest tag
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         id: get_latest_tag
@@ -125,7 +125,7 @@ jobs:
           git tag -a $new_tag -m "Release $new_tag"
           git push origin $new_tag
 
-      # 在 Run GoReleaser 之前添加配置检查步骤
+      # Add config check step before Run GoReleaser
       - name: Check GoReleaser config
         run: |
           if [ ! -f ".goreleaser.yml" ] && [ ! -f ".goreleaser.yaml" ]; then
@@ -133,17 +133,17 @@ jobs:
             exit 1
           fi
 
-      # 添加依赖检查步骤
+      # Add dependency check step
       - name: Check Dependencies
         run: |
           go mod verify
           go mod download
-          # 如果使用 vendor 模式，则执行以下命令
+          # If using vendor mode, run the following commands
           if [ -d "vendor" ]; then
             go mod vendor
           fi
 
-      # 添加构建环境准备步骤
+      # Add build environment preparation step
       - name: Prepare Build Environment
         run: |
           echo "Building version: ${VERSION:-development}"
@@ -151,7 +151,7 @@ jobs:
           echo "GOARCH=${GOARCH:-$(go env GOARCH)}" >> $GITHUB_ENV
           echo "GO111MODULE=on" >> $GITHUB_ENV
 
-      # 添加清理步骤
+      # Add cleanup step
       - name: Cleanup workspace
         run: |
           rm -rf /tmp/go/
@@ -160,7 +160,7 @@ jobs:
           git clean -fdx
           git status
 
-      # 修改 GoReleaser 步骤
+      # Modify GoReleaser step
       - name: Run GoReleaser
         if: ${{ startsWith(github.ref, 'refs/tags/v') || (success() && steps.get_latest_tag.outputs.version != '') }}
         uses: goreleaser/goreleaser-action@v3
@@ -178,29 +178,29 @@ jobs:
           GOMODCACHE: /tmp/go/pkg/mod
           GORELEASER_DEBUG: 1
           GORELEASER_CURRENT_TAG: ${{ steps.get_latest_tag.outputs.version }}
-          # 添加额外的构建信息
+          # Add extra build information
           BUILD_TIME: ${{ steps.get_latest_tag.outputs.version }}
           BUILD_COMMIT: ${{ github.sha }}
 
-      # 优化 vendor 同步步骤
+      # Optimize vendor sync step
       - name: Sync vendor directory
         run: |
           echo "Syncing vendor directory..."
           go mod tidy
           go mod vendor
           go mod verify
-          # 验证 vendor 目录
+          # Verify vendor directory
           if [ -d "vendor" ]; then
             echo "Verifying vendor directory..."
             go mod verify
-            # 检查是否有未跟踪的文件
+            # Check for untracked files
             if [ -n "$(git status --porcelain vendor/)" ]; then
               echo "Warning: Vendor directory has uncommitted changes"
               git status vendor/
             fi
           fi
 
-      # 添加错误检查步骤
+      # Add error check step
       - name: Check GoReleaser Output
         if: failure()
         run: |
@@ -222,7 +222,7 @@ jobs:
         run: |
           echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
-      # 改进验证步骤
+      # Improve verification step
       - name: Verify Release
         if: ${{ startsWith(github.ref, 'refs/tags/v') || (success() && steps.get_latest_tag.outputs.version != '') }}
         run: |
@@ -231,18 +231,18 @@ jobs:
             echo "::error::Release artifacts not found"
             exit 1
           fi
-          # 验证生成的二进制文件
+          # Verify generated binary files
           for file in dist/cursor-id-modifier_*; do
             if [ -f "$file" ]; then
               echo "Verifying: $file"
               if [[ "$file" == *.exe ]]; then
-                # Windows 二进制文件检查
+                # Windows binary check
                 if ! [ -x "$file" ]; then
                   echo "::error::$file is not executable"
                   exit 1
                 fi
               else
-                # Unix 二进制文件检查
+                # Unix binary check
                 if ! [ -x "$file" ]; then
                   echo "::error::$file is not executable"
                   exit 1
@@ -256,7 +256,7 @@ jobs:
         run: |
           echo "::error::Release process failed"
 
-      # 修改构建摘要步骤
+      # Modify build summary step
       - name: Build Summary
         if: always()
         run: |
