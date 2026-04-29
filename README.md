@@ -247,10 +247,7 @@ This tool is provided "as is" without warranty of any kind. The authors are not 
 
 </div>
 
-
-##  Troubleshooting
-
-### Common Issues
+## Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
