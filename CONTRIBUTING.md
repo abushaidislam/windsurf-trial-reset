@@ -29,7 +29,7 @@ This project follows a simple code of conduct:
 
 ### Getting Started
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git`
+2. Clone your fork: `git clone https://github.com/abushaidislam/windsurf-trial-reset.git`
 3. Create a feature branch: `git checkout -b feature/your-feature-name`
 4. Make your changes
 5. Test thoroughly
@@ -46,7 +46,7 @@ This project follows a simple code of conduct:
 ### Local Development
 ```powershell
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git
+git clone https://github.com/abushaidislam/windsurf-trial-reset.git
 cd windsurf-trial-reset
 
 # Make your changes to the scripts
@@ -132,7 +132,7 @@ Use GitHub issues to request new features. Please:
 ## 📞 Getting Help
 
 - 📧 **Email**: your-email@example.com
-- 💬 **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues)
+- 💬 **Issues**: [GitHub Issues](https://github.com/abushaidislam/windsurf-trial-reset/issues)
 - 📖 **Documentation**: [README.md](README.md)
 
 ## 🙏 Recognition

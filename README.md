@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](https://github.com/topics/windows)
 [![PowerShell](https://img.shields.io/badge/shell-PowerShell-blue.svg)](https://github.com/topics/powershell)
+[![GitHub stars](https://img.shields.io/github/stars/abushaidislam/windsurf-trial-reset)](https://github.com/abushaidislam/windsurf-trial-reset/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/abushaidislam/windsurf-trial-reset)](https://github.com/abushaidislam/windsurf-trial-reset/issues)
 
 **⚠️ EDUCATIONAL PURPOSES ONLY - USE AT YOUR OWN RISK**
 
@@ -15,6 +17,16 @@
 *A tool to reset Windsurf editor trial periods by modifying machine identification data*
 
 </div>
+
+---
+
+## 📊 Environment Details
+
+- **Created**: April 29, 2026
+- **Last Updated**: April 29, 2026
+- **Platform**: Windows (Primary), macOS/Linux (Limited Support)
+- **PowerShell**: 5.1+ Required
+- **Repository**: https://github.com/abushaidislam/windsurf-trial-reset
 
 ---
 
@@ -57,21 +69,21 @@ powershell -ExecutionPolicy Bypass -File "windsurf_reset.ps1"
 ### Option 2: Advanced Reset
 ```powershell
 # Download and run the full-featured tool
-irm https://raw.githubusercontent.com/YOUR_USERNAME/windsurf-trial-reset/main/scripts/run/windsurf_win_id_modifier.ps1 | iex
+irm https://raw.githubusercontent.com/abushaidislam/windsurf-trial-reset/main/scripts/run/windsurf_win_id_modifier.ps1 | iex
 ```
 
 ## 📦 Installation
 
 ### Method 1: Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git
+git clone https://github.com/abushaidislam/windsurf-trial-reset.git
 cd windsurf-trial-reset
 ```
 
 ### Method 2: Direct Download
 ```powershell
 # Download the simple reset tool
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/YOUR_USERNAME/windsurf-trial-reset/main/windsurf_reset.ps1" -OutFile "windsurf_reset.ps1"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/abushaidislam/windsurf-trial-reset/main/windsurf_reset.ps1" -OutFile "windsurf_reset.ps1"
 ```
 
 ## 🔧 Usage
@@ -120,7 +132,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ### Development Setup
 ```bash
 # Clone and setup
-git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git
+git clone https://github.com/abushaidislam/windsurf-trial-reset.git
 cd windsurf-trial-reset
 
 # Make your changes
@@ -131,8 +143,8 @@ cd windsurf-trial-reset
 ## 📋 Issues and Support
 
 - 🐛 **Bug Reports**: [Create an issue](.github/ISSUE_TEMPLATE/bug-report.md)
-- 💡 **Feature Requests**: [Create an issue](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues)
-- 🤔 **Questions**: Check [existing issues](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues) first
+- 💡 **Feature Requests**: [Create an issue](https://github.com/abushaidislam/windsurf-trial-reset/issues)
+- 🤔 **Questions**: Check [existing issues](https://github.com/abushaidislam/windsurf-trial-reset/issues) first
 
 ## 📄 License
 
@@ -163,7 +175,7 @@ This tool is provided "as is" without warranty of any kind. The authors are not 
 
 **Made with ❤️ for the developer community**
 
-[⭐ Star this repo](https://github.com/YOUR_USERNAME/windsurf-trial-reset) • [🐛 Report Issues](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues) • [📧 Contact](mailto:your-email@example.com)
+[⭐ Star this repo](https://github.com/abushaidislam/windsurf-trial-reset) • [🐛 Report Issues](https://github.com/abushaidislam/windsurf-trial-reset/issues) • [📧 Contact](mailto:abushaidislam@gmail.com)
 
 </div>
 
