@@ -1,15 +1,27 @@
-# Compiled binary
-/cursor-id-modifier
-/cursor-id-modifier.exe
+# Windsurf Trial Reset Tool - GitIgnore
 
-# Build output directories
-bin/
+# Build and release artifacts
+releases/
 dist/
+bin/
 
-# Go specific
-go.sum
-go/
-.cache/
+# PowerShell specific
+*.ps1~
+*.ps1.backup
+
+# Windows executables and libraries
+*.exe
+*.exe~
+*.dll
+*.sys
+*.com
+
+# Test and temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*~
 
 # IDE and editor files
 .vscode/
@@ -17,30 +29,41 @@ go/
 *.swp
 *.swo
 
-# OS specific
+# OS specific files
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Build and release artifacts
-releases/
-*.syso
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# Backup files (should not be committed)
+*.backup
+backups/
 
-# Test files
+# Configuration and sensitive data
+config.local.*
+secrets.*
+*.key
+*.pem
+
+# Test directories
+test-results/
+coverage/
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Go specific (legacy)
+go.sum
+go/
+.cache/
 *.test
 *.out
 coverage.txt
+*.syso
 
-# Temporary files
-*.tmp
-*~
-*.bak
-*.log
-
+# Legacy directories
 .cunzhi*/
 .sanshu*/
 docs/

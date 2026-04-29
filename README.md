@@ -1,22 +1,171 @@
-# 🚀 Windsurf Free Trial Reset Tool
+# 🚀 Windsurf Trial Reset Tool
 
 <div align="center">
 
-[![Release](https://img.shields.io/github/v/release/yuaotian/go-cursor-help?style=flat-square&logo=github&color=blue)](https://github.com/yuaotian/go-cursor-help/releases/latest)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&logo=bookstack)](https://github.com/yuaotian/go-cursor-help/blob/master/LICENSE)
-[![Stars](https://img.shields.io/github/stars/yuaotian/go-cursor-help?style=flat-square&logo=github)](https://github.com/yuaotian/go-cursor-help/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](https://github.com/topics/windows)
+[![PowerShell](https://img.shields.io/badge/shell-PowerShell-blue.svg)](https://github.com/topics/powershell)
 
-[🌟 English](README.md) | [🌏 中文](README_CN.md) | [🌏 日本語](README_JP.md)
+**⚠️ EDUCATIONAL PURPOSES ONLY - USE AT YOUR OWN RISK**
 
-<img src="/img/windsurf.png" alt="Windsurf Logo" width="120"/>
+[📖 Documentation](#documentation) • [🚀 Quick Start](#quick-start) • [🤝 Contributing](CONTRIBUTING.md) • [📋 Issues](.github/ISSUE_TEMPLATE/bug-report.md)
+
+<img src="https://raw.githubusercontent.com/windsurf-ai/windsurf/main/assets/windsurf-logo.png" alt="Windsurf Logo" width="120" height="120"/>
+
+*A tool to reset Windsurf editor trial periods by modifying machine identification data*
 
 </div>
 
 ---
 
+## ⚠️ **Important Disclaimer**
+
 <div align="center">
 
-## ⚡️ [Limited Stock] Windsurf Pay-as-you-go Membership
+### **This tool is for educational purposes only!**
+
+**By using this tool, you acknowledge that:**
+- You understand the risks of modifying application data
+- You accept full responsibility for any consequences
+- This tool may violate Windsurf's Terms of Service
+- The authors are not responsible for any issues that may arise
+
+**Use at your own risk. The authors assume no liability.**
+
+</div>
+
+---
+
+## ✨ Features
+
+- 🔄 **Reset Trial Periods**: Reset Windsurf editor trial periods
+- 🪟 **Windows Support**: Optimized for Windows 10/11
+- 🛡️ **Safe Operations**: Creates automatic backups before modifications
+- 🔧 **Multiple Methods**: Simple and advanced reset options
+- 📊 **Progress Tracking**: Real-time operation status
+- 🔙 **Easy Restore**: Backup restoration capabilities
+
+## 🚀 Quick Start
+
+### Option 1: Simple Reset (Recommended)
+```powershell
+# Download and run the simple reset tool
+cd "C:\Path\To\Your\Folder"
+powershell -ExecutionPolicy Bypass -File "windsurf_reset.ps1"
+```
+
+### Option 2: Advanced Reset
+```powershell
+# Download and run the full-featured tool
+irm https://raw.githubusercontent.com/YOUR_USERNAME/windsurf-trial-reset/main/scripts/run/windsurf_win_id_modifier.ps1 | iex
+```
+
+## 📦 Installation
+
+### Method 1: Clone Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git
+cd windsurf-trial-reset
+```
+
+### Method 2: Direct Download
+```powershell
+# Download the simple reset tool
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/YOUR_USERNAME/windsurf-trial-reset/main/windsurf_reset.ps1" -OutFile "windsurf_reset.ps1"
+```
+
+## 🔧 Usage
+
+### Basic Usage
+1. **Close Windsurf** completely
+2. **Run the reset tool** as Administrator
+3. **Restart Windsurf**
+4. **Check if trial is reset**
+
+### Advanced Usage
+```powershell
+# Run with custom options
+.\windsurf_reset.ps1 -SkipBackup  # Skip backup creation
+```
+
+### Configuration Files Modified
+- **Windows**: `%APPDATA%\Windsurf\User\globalStorage\storage.json`
+- **Backup Location**: `%APPDATA%\Windsurf\User\globalStorage\backups\`
+
+## 🛠️ How It Works
+
+This tool modifies Windsurf's telemetry and machine identification data:
+
+1. **Machine ID**: Generates new unique machine identifier
+2. **Device ID**: Creates new device fingerprint
+3. **Telemetry Data**: Updates tracking information
+4. **Session Data**: Resets session tracking
+
+**Technical Details:**
+- Modifies `storage.json` configuration file
+- Updates telemetry keys: `machineId`, `devDeviceId`, `macMachineId`, `sqmId`
+- Creates timestamped backups automatically
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Quick Contribution Guide
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+### Development Setup
+```bash
+# Clone and setup
+git clone https://github.com/YOUR_USERNAME/windsurf-trial-reset.git
+cd windsurf-trial-reset
+
+# Make your changes
+# Test on your system
+# Submit PR
+```
+
+## 📋 Issues and Support
+
+- 🐛 **Bug Reports**: [Create an issue](.github/ISSUE_TEMPLATE/bug-report.md)
+- 💡 **Feature Requests**: [Create an issue](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues)
+- 🤔 **Questions**: Check [existing issues](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues) first
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Note**: While the code is open source, the tool's purpose may conflict with Windsurf's Terms of Service. Use responsibly.
+
+## ⚖️ Legal Disclaimer
+
+This tool is provided "as is" without warranty of any kind. The authors are not responsible for:
+
+- Any damages or data loss
+- Violation of Windsurf's terms of service
+- Account suspension or termination
+- Any other consequences of use
+
+**By using this tool, you accept all risks and responsibilities.**
+
+## 🙏 Acknowledgments
+
+- Original work based on community research
+- Thanks to contributors and testers
+- Built for educational purposes
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the developer community**
+
+[⭐ Star this repo](https://github.com/YOUR_USERNAME/windsurf-trial-reset) • [🐛 Report Issues](https://github.com/YOUR_USERNAME/windsurf-trial-reset/issues) • [📧 Contact](mailto:your-email@example.com)
+
+</div>
 
 <img src="https://img.shields.io/badge/🔥_Limited_Stock-In_Stock-FF6B6B?style=for-the-badge" alt="Limited Stock"/> <img src="https://img.shields.io/badge/💎_Official_Seat-No_Plugins-4ECDC4?style=for-the-badge" alt="Official Seat"/> <img src="https://img.shields.io/badge/🛡️_30_Day_Guarantee-Most_Stable-45B7D1?style=for-the-badge" alt="30-Day Guarantee"/>
 
