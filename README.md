@@ -268,31 +268,4 @@ This tool is provided "as is" without warranty of any kind. The authors are not 
 
 ---
 
-## 💝 Support
-
-If you find this tool helpful, consider supporting the project:
-
-| Method | Details |
-|--------|---------|
-| **WeChat** | `JavaRookie666` |
-| **Telegram** | [@yuaotian](https://t.me/yuaotian) |
-| **USDT (TRC-20)** | `TFbJnoY5Lep5ZrDwBbT8rV1i8xR4ZhX53k` |
-| **Litecoin** | `LVrigKxtWfPymMRtRqL3z2eZxfncR3dPV7` |
-
----
-
-## ⭐ Project Stats
-
-<div align="center">
-
-[![Star History Chart](https://api.star-history.com/svg?repos=abushaidislam/windsurf-trial-reset&type=Date)](https://star-history.com/#abushaidislam/windsurf-trial-reset&Date)
-
-</div>
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Note**: While the code is open source, using this tool may violate Windsurf's Terms of Service. Use responsibly and at your own risk.
-
 
